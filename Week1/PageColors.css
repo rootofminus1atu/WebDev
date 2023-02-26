@@ -1,0 +1,26 @@
+h1 {
+    color: rgb(197, 57, 127);
+    display: inline;
+    font-size: 400%;
+    font-style: italic;
+    font-variant: small-caps;
+    border-bottom: 2px dashed greenyellow;
+}
+
+body{
+    border: green;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#logo{
+    display: inline;
+}
+
+body{
+    color: rgb(202, 30, 30);
+    background-color: black;
+}
+
+/*
+C# styled comments
+*/

@@ -1,0 +1,43 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  border: 2px solid black;
+}
+
+section {
+  padding: 3em 0;
+  background-color: lightgreen;
+  border: 2px solid black;
+  margin: 6px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+section .box {
+  border: 2px solid black;
+  height: 12em;
+  width: 12em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+section .box .lil-box {
+  height: 25%;
+  width: 25%;
+}
+section .box .lil-box:nth-child(1) {
+  background-color: red;
+}
+section .box .lil-box:nth-child(2) {
+  background-color: rgb(0, 255, 0);
+}
+section .box .lil-box:nth-child(3) {
+  background-color: blue;
+}
+section .code {
+  border: 2px solid black;
+  height: 12em;
+  width: calc(100vw - 24em);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,45 @@
+        <header>
+            <div class="header-content">
+                <div class="header-group">
+                    <img src="Images/dpytrans2.png" id="logo" alt="discord logo">
+                    <h1>How to Discord.py</h1>
+                </div>
+                <div class="header-group">
+                    <h1>Hi</h1>
+                    <h1>And hi again</h1>
+                </div>
+            </div>
+        </header>
+
+
+    header {
+        padding: 0 12px;
+        background-color: rgba(35, 39, 42);
+        white-space: nowrap;
+        height: 80px; /* how big the header is */
+    }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;  /* y = 0 center */
+            padding: 0 12px;
+            height: 100%;
+        }
+
+        .header-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+  
+        #logo {
+            height: 100%; /* set the height of the image to 100% of the header */
+        }
+  
+        header h1 {
+            margin: 0; /* remove any margin from the title */
+            padding: 0 30px;
+            color: #ffffff; /* set the color of the title as desired */
+        }

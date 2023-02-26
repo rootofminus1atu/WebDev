@@ -1,0 +1,40 @@
+body {
+    background-color: #abd5ff;
+    margin: 0 5%;
+}
+
+h1 , h2, h3 {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#mainText {
+    color: black;
+    font-family: arial;
+    text-align: justify;
+}
+
+a {
+    font-size: 35px;
+}
+
+.anchorLarge {
+    color: chartreuse;
+    font-size: 35px;
+}
+
+.fullWidthContent {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}

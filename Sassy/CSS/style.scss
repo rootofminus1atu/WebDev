@@ -1,0 +1,67 @@
+$buttonCol: rgb(209, 93, 238);
+$boxDim: 12em;
+
+@mixin flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center-column() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-direction: column;
+}
+
+header {
+    @include flex-center();
+    background-color: lightblue;
+    border: 2px solid black;
+}
+
+section {
+    padding: $boxDim/4 0;
+    background-color: lightgreen;
+    border: 2px solid black;
+    margin: 6px 0;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .box {
+        border: 2px solid black;
+        height: $boxDim;
+        width: $boxDim;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .lil-box {
+            height: calc(100%/4);
+            width: calc(100%/4);
+            
+            &:nth-child(1) {
+                background-color: red;
+            }
+            &:nth-child(2) {
+                background-color: rgb(0, 255, 0);
+            }
+            &:nth-child(3) {
+                background-color: blue;
+            }
+        }
+    }
+
+    .code {
+        border: 2px solid black;
+        height: $boxDim;
+        width: calc(100vw - 2 * $boxDim)
+    }
+}
+
+
+

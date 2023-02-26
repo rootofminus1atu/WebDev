@@ -1,0 +1,62 @@
+        <main>
+            <div class="main-group">
+                <div class="card-container">
+                    <div class="card">hi</div>
+                    <div class="card">hi</div>
+                    <div class="card">hi</div>
+                    <div class="card">hi</div>
+                </div>
+            </div>
+
+            <div class="main-group">
+            </div>
+
+            <div class="main-group">
+            </div>
+        </main>
+    
+    
+    
+    main {
+        flex: 1;
+    }
+
+        .main-group {
+            height: 20em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-group:nth-child(1) {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+            .main-group:nth-child(1) .card-container {
+                background-color: rgba(245, 41, 41, 0.15);
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%); 
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+                .main-group:nth-child(1) .card {
+                    position: absolute;
+                    height: 10em;
+                    aspect-ratio: 5/7;
+                    background-color: rgba(245, 41, 41, 0.15);
+                    transition: 800ms cubic-bezier(0.075, 0.82, 0.165, 1);
+                    
+                }
+
+                .main-group:nth-child(1) .card-container:hover > .card:nth-child(1) {
+                    background-color: blueviolet;
+                    transform: translate(-20em, 0)
+                }
+
+        .main-group:nth-child(2) {
+            background-color: rgba(255,255,255,0.15);
+        }
