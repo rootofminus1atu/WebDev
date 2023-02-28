@@ -4,7 +4,7 @@ body {
   min-height: 100%; /* keeps the footer at the bottom */
   margin: 0 auto;
   width: 100%;
-  max-width: 1280px;
+  max-width: 2000px;
   background-color: rgb(0, 0, 0);
   color: white;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -73,7 +73,7 @@ body header nav ul li a {
   */
 }
 body header nav ul li a:hover {
-  text-shadow: 0 0 10px rgb(255, 255, 255);
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
 }
 body header nav::after {
   content: "";

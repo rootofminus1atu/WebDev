@@ -6,7 +6,7 @@ body {
     min-height: 100%; /* keeps the footer at the bottom */
     margin: 0 auto;
     width: 100%;
-    max-width: 1280px;
+    max-width: 2000px;
 
     background-color: rgb(0, 0, 0);
     color: white;           
@@ -65,7 +65,7 @@ body {
                     position: relative;
 
                     &:hover {
-                        text-shadow: 0 0 10px rgb(255, 255, 255);
+                        text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white;
                     }
                     /*
                     &::after {
