@@ -1,0 +1,72 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    margin: 0;
+}
+
+#logo {
+    float: left;
+    margin: 0 10px;
+}
+
+h1 {
+    color: red;
+}
+
+nav {
+    background-color: gray;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+    border: 2px solid rgb(255, 82, 82);
+    border-radius: 16px;
+    background-color: rgb(165, 165, 165);
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#active {
+    background-color: rgb(255, 82, 82);
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.image-display {
+    width: 35%;
+    aspect-ratio: 1/1;
+    margin-right: 20px;
+}
+
+.floating .image-display {
+    float: left;
+}
+
+footer {
+    background-color: gray;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

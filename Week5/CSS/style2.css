@@ -46,6 +46,11 @@ nav ul li a {
     color: white;
 }
 
+nav ul li a:active {
+    text-decoration: none;
+    color: orange;
+}
+
 main {
     background-color:rgb(49, 116, 93)
 }
