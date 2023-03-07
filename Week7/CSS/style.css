@@ -1,0 +1,41 @@
+html, body {
+    margin: 0;
+    background-color: black;
+
+    height: 100%; /* footer at the bottom of the page */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: aqua;
+    padding: 1px 20px;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+main {
+    background-color: rgb(0, 160, 160);
+    display: flex;
+
+    flex: 1; /* footer at the bottom of the page */
+}
+
+main p:first-child::first-letter { font-size: 200% }
+
+section:nth-child(1) {
+    background-color: rgb(1, 124, 124);
+    flex-basis: 60%;
+}
+
+section:nth-child(2) {
+    background-color: rgb(0, 100, 100);
+    flex-basis: 40%;
+}
+
+footer {
+    background-color: rgb(0, 75, 75);
+    padding: 50px
+}
