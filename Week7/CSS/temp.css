@@ -1,0 +1,22 @@
+html, body {
+    background-color: black;
+    color: white
+}
+
+header {
+    background-color: green;
+    text-align: center;
+}
+
+nav {
+    padding: 10px;
+    margin: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav div a{
+    padding: 10px;
+}
