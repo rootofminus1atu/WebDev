@@ -4,17 +4,15 @@ const screenHeight = window.screen.height;
 const styleElement = document.createElement('style');
 document.head.appendChild(styleElement);
 
-let css = `.hero { 
-    height: ${screenHeight}px; 
+
+let css = `
+.max-width {
     max-width: ${screenWidth}px; 
+    margin: 0 auto;
 }
 
-body {
-    max-width: ${screenWidth}px;
-}
-
-header {
-    max-width: ${screenWidth}px;
+.hero { 
+    height: ${screenHeight}px;
 }
 `
 

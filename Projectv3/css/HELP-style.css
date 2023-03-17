@@ -2,20 +2,30 @@ html {
     height: 100%;
 }
 
+
 body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
 
     border: 2px solid red;
 
-    max-width: 1280px;
+    
+    
+}
+
+.container {
+    flex: 1;
 
     background-image: url("../images/seoul-south-korea-cyberpunk-urban.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.another-one {
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 main {
