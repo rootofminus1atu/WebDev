@@ -1,1 +1,65 @@
-<!-- IDK -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>HEADER</h1>
+    </header>
+
+    <nav>
+        stuff stuff stuff
+    </nav>
+
+    <main>
+        <section class="left-part">
+            <!-- put all the main info here -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aliquam neque officia unde architecto. Expedita, deserunt praesentium. Illum, a neque. Autem pariatur in mollitia quaerat. Pariatur ullam beatae fuga alias, laboriosam veritatis dolorum eum culpa veniam magnam quam necessitatibus quod illum. Sapiente vero at quisquam quae enim fugiat impedit modi.</p>
+            <h1>Hello</h1>
+            <div class="container">
+                <h4>flex</h4>
+                <h4>box</h4>
+                <h4>magic</h4>
+            </div>
+
+            <iframe class="my-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20535764.097084153!2d-33.501351450000016!3d71.69045985000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ea20dbbe3c07715%3A0x34cf9d830114e218!2sGreenland!5e0!3m2!1sen!2sie!4v1678975223229!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+
+        <aside class="right-part">
+            <!-- your aside list thing -->
+            <ul>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+                <li>1</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <input type="text" placeholder="name" id="nameInput">
+        <input type="password" placeholder="password" id="passInput">
+        <button id="clicker" onclick="checkCredentials()">click me</button>
+    </footer>
+</body>
+</html>
+
+<script>
+    function checkCredentials() {
+        const name = document.getElementById("nameInput").value;
+        const pass = document.getElementById("passInput").value;
+        
+        // Here you could add your own code to check the credentials
+        if (name === "myusername" && pass === "mypassword") {
+            location.href = "secret.html";
+        } else {
+            alert("Incorrect username or password");
+        }
+    }
+</script>

@@ -1,0 +1,57 @@
+header {
+    background-color: aquamarine;
+    padding: 10px;
+}
+
+nav {
+    background-color: rgb(93, 189, 157);
+}
+
+main {
+    background-color: rgb(71, 143, 119);
+
+    display: flex;  /* this */
+}
+
+.left-part {
+    flex-basis: 80%;   /* and this */
+    background-color: rgb(53, 105, 89);
+}
+
+.right-part {
+    flex-basis: 20%;   /* AND this */
+}
+
+
+footer {
+    background-color: rgb(36, 73, 61);
+}
+
+
+
+
+
+.my-map {
+    filter: grayscale(100%) invert(92%) contrast(83%);
+    border: 2px solid #444;
+    box-shadow: 0 0 10px 5px #444;
+}
+
+
+
+
+
+
+
+/*
+
+flexbox bonus below
+
+*/
+
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

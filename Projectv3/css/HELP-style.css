@@ -1,0 +1,29 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    border: 2px solid red;
+
+    max-width: 1280px;
+
+    background-image: url("../images/seoul-south-korea-cyberpunk-urban.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main {
+    border: 2px solid blue;
+}
+
+footer {
+    margin-top: auto;
+
+    border: 2px solid green;
+}
