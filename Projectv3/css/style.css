@@ -43,7 +43,7 @@ header {
 }
 
 .header-group {
-    flex-basis:33%;
+    flex-basis:100%;
     height: 100%;
 
     display: flex;
@@ -99,6 +99,7 @@ header a:hover {
 }
 
 h1, h2, h3 {
+    text-align: center;
     /*
     text-shadow: -2px -2px 0px rgb(255, 4, 242);
     text-shadow: -2px -2px 4px rgb(255, 4, 242), 2px 2px 4px rgb(184, 4, 255);
@@ -170,4 +171,13 @@ footer a {
 
 .icons li {
     margin: 0 0.4rem;
+}
+
+
+
+
+.brand-name {
+    text-shadow: 2px 2px 8px rgb(204, 12, 252);
+    text-align: start;
+    /* idk if I should keep this */
 }
