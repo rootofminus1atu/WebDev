@@ -1,13 +1,17 @@
 @import url('https://fonts.cdnfonts.com/css/bebas-neue');
 @import url('https://fonts.cdnfonts.com/css/norwester');
+@import url('https://fonts.cdnfonts.com/css/raleway-5');
+@import url('https://fonts.cdnfonts.com/css/starcruiser');
+@import url('https://fonts.cdnfonts.com/css/calling-code');
 
 html {
     height: 100%;
     
     background-color: black;
     color: rgb(255, 255, 255);
+    font-family: 'Calling Code', sans-serif;
 }
-  
+
 body {
     min-height: 100%;
     width: 100%;
@@ -17,6 +21,8 @@ body {
 }
 
 
+
+
   
 header {
     position: fixed;
@@ -24,7 +30,6 @@ header {
     width: 100%;
     z-index: 9999;
     transition: all 0.3s ease-in-out;
-    font-family: 'bebas-neue', sans-serif;
 }
 
 .header-content {
@@ -32,7 +37,7 @@ header {
     justify-content: center;
     align-items: center;
 
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     height: 4rem;
     padding: 1rem;
 }
@@ -57,9 +62,6 @@ header {
     justify-content: end;
 }
 
-
-
-
 header img {
     height: 100%;
     margin-right: 1rem;
@@ -73,62 +75,99 @@ header img {
   
 img.shadow {
     position: absolute;
-    bottom: -2px;
-    left: 2px;
+    bottom: 0;
+    left: 0;
     filter: brightness(0.5) sepia(1) saturate(10000%) hue-rotate(300deg) blur(4px);
-    opacity: 0.6;
+    opacity: 0.9;
     z-index: -1;
 }
 
+
+header h2,
 header a {
     text-decoration: none;
     color: white;
-    font-weight: 700;
+    /*text-shadow: -2px -2px 4px rgb(255, 4, 242), 2px 2px 4px rgb(184, 4, 255);
+*/  
+    transition: all 0.15s ease-in-out;
 }
 
-
-header h1, header h2, header a {
+header h2:hover,
+header a:hover {
     text-shadow: -2px -2px 4px rgb(255, 4, 242), 2px 2px 4px rgb(184, 4, 255);
+    scale: 1.1;
 }
 
+h1, h2, h3 {
+    /*
+    text-shadow: -2px -2px 0px rgb(255, 4, 242);
+    text-shadow: -2px -2px 4px rgb(255, 4, 242), 2px 2px 4px rgb(184, 4, 255);
+*/
+}
 
 header.scrolled {
     background-color: rgba(0,0,0,0.6);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(5px);
 }
 
 main {
     flex: 1;
-
-    background-color: rgba(102, 59, 143, 0.2);
-    background-image: url("../images/vaporwave-sunset.jpg");
-    background-size: cover;
-    background-position: center;
 }
 
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
-    font-size: 6rem;
-}
 
-.hero h1 {
-    font-family: 'Norwester', sans-serif;
-    font-weight: bold;
-
-    background-image: url("../images/vapor-dark.jpg");
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: -5px -5px 0 rgba(0, 0, 0);
-}
 
   
 footer {
-    background-color: black;
-    height: 50px;
+    background-image: linear-gradient(rgba(18, 2, 32, 0.6), rgba(46, 8, 78, 0.6));
+    background-size: cover;
+    border-top: 2px solid rgb(222, 59, 255);
+    box-shadow: 0 0 10px rgb(222, 59, 255);
+}
+
+.footer-content {
+    padding: 2rem 6rem;
+}
+
+.footer-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-group {
+    padding: 0 1rem;
+}
+
+.footer-row:last-child {
+    border-top: 2px solid white;
+}
+
+.footer-row:first-child .footer-group:first-child{
+    width: 40%;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-row:first-child .footer-group:last-child {
+    text-align: end;
+}
+
+footer a {
     color: white;
+    text-decoration: none;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons li {
+    margin: 0 0.4rem;
 }

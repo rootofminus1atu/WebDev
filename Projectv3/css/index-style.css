@@ -1,0 +1,72 @@
+main {
+    background-image: url("../images/vaporwave-darkblue.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero {
+    font-family: 'norwester', sans-serif;
+    font-size: 6rem;
+    padding: 0;
+}
+
+.hero h1 {
+    background-image: url("../images/vapor-dark.jpg");
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: -5px -5px 0 rgba(0, 0, 0);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    margin-bottom: 8rem;
+}
+
+.main-content h2 {
+    font-size: 3rem;
+    text-shadow: 4px 4px 0 black, 0 0 10px black, 0 0 20px black;
+}
+
+
+
+.see-more-container {
+    width: 65%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.see-more {
+    font-size: 1.4rem;
+    padding: 1rem;
+    padding-top: 0.5rem;
+    border-bottom: 4px solid rgb(27, 171, 255);
+    border-right: 4px solid rgb(27, 171, 255);
+    border-left: 4px solid rgb(27, 171, 255);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    backdrop-filter: blur(5px);
+    transition: all 0.15s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.see-more a {
+    text-decoration: none;
+    color: white;
+    text-shadow: -2px -2px 4px rgb(4, 247, 255), 2px 2px 4px rgb(4, 21, 255);
+}
+
+.see-more:hover {
+    transform: scale(1.1);
+    transform-origin: top center;
+}
+
+
+
+
