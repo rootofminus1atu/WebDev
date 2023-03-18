@@ -1,7 +1,11 @@
+@import url('https://fonts.cdnfonts.com/css/bebas-neue');
+@import url('https://fonts.cdnfonts.com/css/norwester');
+
 html {
     height: 100%;
     
     background-color: black;
+    color: rgb(255, 255, 255);
 }
   
 body {
@@ -15,25 +19,111 @@ body {
 
   
 header {
-    background-color: rgba(140, 81, 196, 0.2);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 9999;
+    transition: all 0.3s ease-in-out;
+    font-family: 'bebas-neue', sans-serif;
 }
 
-header h1 {
-    text-align: center;
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.2rem;
+    height: 4rem;
+    padding: 1rem;
+}
+
+.header-group {
+    flex-basis:33%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.header-group:nth-child(1) {
+    justify-content: start;
+}
+
+.header-group:nth-child(2) {
+    justify-content: space-evenly;
+}
+
+.header-group:nth-child(3) {
+    justify-content: end;
+}
+
+
+
+
+header img {
+    height: 100%;
+    margin-right: 1rem;
+}
+
+.image-container {
+    height: 100%;
+    position: relative;
+    display: inline-block;
+}
+  
+img.shadow {
+    position: absolute;
+    bottom: -2px;
+    left: 2px;
+    filter: brightness(0.5) sepia(1) saturate(10000%) hue-rotate(300deg) blur(4px);
+    opacity: 0.6;
+    z-index: -1;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+
+header h1, header h2, header a {
+    text-shadow: -2px -2px 4px rgb(255, 4, 242), 2px 2px 4px rgb(184, 4, 255);
+}
+
+
+header.scrolled {
+    background-color: rgba(0,0,0,0.6);
+    backdrop-filter: blur(3px);
 }
 
 main {
     flex: 1;
 
     background-color: rgba(102, 59, 143, 0.2);
-    background-image: url("../images/image-from-rawpixel-id-599444-jpeg.jpg");
+    background-image: url("../images/vaporwave-sunset.jpg");
     background-size: cover;
     background-position: center;
+}
 
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 6rem;
+}
+
+.hero h1 {
+    font-family: 'Norwester', sans-serif;
+    font-weight: bold;
+
+    background-image: url("../images/vapor-dark.jpg");
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: -5px -5px 0 rgba(0, 0, 0);
 }
 
   
