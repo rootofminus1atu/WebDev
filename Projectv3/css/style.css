@@ -23,6 +23,16 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
   
 header {
     position: fixed;
@@ -111,9 +121,28 @@ header.scrolled {
     backdrop-filter: blur(5px);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 main {
     flex: 1;
 }
+
+
+
+
+
+
+
 
 
 
@@ -161,6 +190,13 @@ footer ul {
 footer a {
     color: white;
     text-decoration: none;
+    transition: all 0.15s ease-in-out;
+}
+
+
+footer a:hover {
+    text-shadow: -2px -2px 4px rgb(255, 4, 242), 2px 2px 4px rgb(184, 4, 255);
+    scale: 1.1;
 }
 
 .icons {

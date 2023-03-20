@@ -1,0 +1,22 @@
+main {
+    background-image: url("../images/vaporwave-darkblue.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.main-content h2 {
+    font-size: 3rem;
+    text-shadow: 4px 4px 0 black, 0 0 10px black, 0 0 20px black;
+}
+
+.main-content:first-child {
+    margin: 8rem 0;
+}

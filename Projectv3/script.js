@@ -1,8 +1,8 @@
 const screenWidth = window.screen.width  // for max width
 const screenHeight = screen.availHeight  // for hero image
 
-const styleElement = document.createElement('style');
-document.head.appendChild(styleElement);
+const styleElement = document.createElement('style')
+document.head.appendChild(styleElement)
 
 
 let css = `
@@ -16,7 +16,7 @@ let css = `
 }
 `
 
-styleElement.innerHTML = css;
+styleElement.innerHTML = css
 
 
 
@@ -36,4 +36,4 @@ window.addEventListener('scroll', function() {
     } else if (!scrolled && header.classList.contains('scrolled')) {
         header.classList.remove('scrolled')
     }
-});
+})
