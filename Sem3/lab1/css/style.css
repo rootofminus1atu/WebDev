@@ -10,10 +10,9 @@ nav ul {
     padding: 1rem;
     background-color: #333;
     gap: 1rem;
-    height: 100px;
 
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 }
 
