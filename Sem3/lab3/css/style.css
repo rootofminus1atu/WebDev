@@ -1,0 +1,164 @@
+html, body {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0;
+
+    font-size: 100%;
+}
+
+main {
+    background-color:aliceblue;
+    padding: 2rem;
+}
+
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    gap: 1rem;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+nav li {
+    padding: 0.5rem 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li:hover {
+    background-color: #111;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+}
+
+
+
+article {
+    padding: 1rem;
+}
+
+article h1 {
+    padding: 0.25rem;
+    border-left: 0.3rem solid #333;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+.all-clubs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+/* 3 rows = not enough space, so I went with 2 */
+
+
+.club {
+    display: flow-root;
+
+}
+
+.club img {
+    float: left;
+    margin-right: 1.4rem;
+    margin-bottom: 1.4rem;
+
+    aspect-ratio: 1;
+    width: 50%;
+}
+
+
+@media (max-width: 500px) {
+    main {
+        background-color: rgb(255, 169, 169);
+    }
+
+    .club img {
+        margin-right: 0;
+        aspect-ratio: 1;
+        width: 100%;
+    }
+}
+
+@media (max-width: 56rem) {
+    main {
+        background-color: rgb(176, 252, 176);
+    }
+}
+
+.club p {
+    display: inline;
+}
+
+.club .club-capacity-warning {
+    color: red;
+    font-size: 80%;
+}
+
+.club button {
+    margin: 0.8rem 0.6rem;
+    padding: 0.6rem 2rem;
+    float: right;
+    border: 0.0625rem solid black;
+    border-radius: 0.2rem;
+    background-color: white;
+    
+    transition: all 0.2s ease-in-out;
+}
+
+.club button:hover {
+    transform: translate(-0.125rem, -0.125rem);
+    box-shadow: 0.125rem 0.125rem 0.25rem rgb(0, 0, 0);
+}
+
+.club a {
+    text-decoration: none;
+    color: black;
+    border-radius: 0.25rem;
+}
+
+
+
+.club:hover {
+    background-color: rgb(204, 231, 255);
+}
+
+.club:hover button {
+    background-color: rgb(163, 212, 255);
+}
+
+
+
+
+
+.intro {
+    padding-bottom: 2rem;
+}
+
+.intro h1 {
+    font-size: 2rem;
+}
+
+
+
+
+
+
