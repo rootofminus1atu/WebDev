@@ -1,3 +1,19 @@
-.btn {
-    border-radius: 0;
+.intro {
+    padding: 4rem 0;
+}
+
+.all-clubs {
+    margin-bottom: 6rem;
+}
+
+.club {
+    padding: 0 3rem;
+}
+
+.club .alert {
+    margin-top: 1rem;
+}
+
+footer p {
+    margin: 0;
 }
