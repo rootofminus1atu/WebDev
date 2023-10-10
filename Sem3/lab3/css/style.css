@@ -2,7 +2,6 @@ html, body {
     max-width: 80rem;
     margin: 0 auto;
     padding: 0;
-
     font-size: 100%;
 }
 
@@ -63,12 +62,7 @@ article h1 {
 
 
 
-.all-clubs {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-    gap: 3rem;
-}
-/* 3 rows = not enough space, so I went with 2 */
+
 
 
 .club {
@@ -85,20 +79,33 @@ article h1 {
     width: 50%;
 }
 
+.all-clubs {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 3rem;
+}
+/* 3 rows = not enough space, so I went with 2 */
 
-@media (max-width: 500px) {
-    main {
-        background-color: rgb(255, 169, 169);
-    }
 
+@media (max-width: 34rem) {
     .club img {
         margin-right: 0;
         aspect-ratio: 1;
         width: 100%;
     }
+
+    main {
+        background-color: rgb(252, 181, 176) !important;
+    }
 }
 
 @media (max-width: 56rem) {
+    .all-clubs {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 3rem;
+    }
+
     main {
         background-color: rgb(176, 252, 176);
     }

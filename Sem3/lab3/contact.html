@@ -6,17 +6,23 @@
     <meta name="description" content="ATUS Clubs & Societies, contact us in case you encounter any issues.">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ham-menu.css">
     <title>Clubs & Societies - ATUS</title>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="clubs.html">Clubs</a></li>
-                <li><a href="register.html">Resiter Club</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <nav id="hamnav">
+            <!-- (B) THE HAMBURGER -->
+            <label for="hamburger">&#9776;</label>
+            <input type="checkbox" id="hamburger"/>
+      
+            <!-- (C) MENU ITEMS -->
+            <div id="hamitems">
+                <a href="index.html">Home</a>
+                <a href="clubs.html">Clubs</a>
+                <a href="register.html">Register Club</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </nav>
     </header>
 
