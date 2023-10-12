@@ -2,12 +2,14 @@
     padding: 4rem 0;
 }
 
-.all-clubs {
+.all-clubs ,
+.club-info,
+.clubs-overview {
     margin-bottom: 6rem;
 }
 
 .club {
-    padding: 0 3rem;
+    padding: 1rem 3rem;
 }
 
 .club .alert {
@@ -16,4 +18,26 @@
 
 footer p {
     margin: 0;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+
+
+.btn {
+    background-color: #ff5731 !important;
+    color: #fff;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #ff7f3f !important;
+    color: #fff; 
+}
+
+.btn:active {
+    background-color: #e64c3b !important;
+    color: #fff;
 }
