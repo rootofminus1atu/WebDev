@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Pattern attribute & regular expressions</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">    
+</head>
+<body>
+<main class="container">
+      
+    <h1>Test form for input patterns</h1>
+    <div class="row">    
+        <div class="col-sm col-md-6"> 
+            <form name="login" action="" method="get">
+                
+                <div class="form-group">
+                    <label for="lab-room-number">Lab Room Number</label> 
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        id="lab-room-number" 
+                        name="lab-room-number" 
+                        pattern="[A-H]\d{4}" 
+                        title="That's not a valid lab room number in ATU Sligo" 
+                        placeholder="Lab room number" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="nsc-number">NSC Number</label> 
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        id="nsc-number" 
+                        name="nsc-number" 
+                        pattern="\d{2}-\d{2}-\d{2}" 
+                        title="That's not a valid NSC number" 
+                        placeholder="NSC Number" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="pps-number">PPS Number</label> 
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        id="pps-number" 
+                        name="pps-number" 
+                        pattern="\d{7}\w{1,2}" 
+                        title="That's not a valid PPS number" 
+                        placeholder="PPS Number" 
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="cao-code">ATU Sligo CAO code</label> 
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        id="cao-code" 
+                        name="cao-code" 
+                        pattern="[Aa][Uu]\d{3}" 
+                        title="An ATU Sligo CAO code starts with AU and is followed by 3 numbers" 
+                        placeholder="CAO code" 
+                        required
+                    >
+                </div> 
+                
+                <div class="form-group">
+                    <label for="getUsername">Username</label> 
+                    <input type="text" class="form-control" id="getUsername" name="username" value="wmitty" pattern="[a-zA-Z0-9]{6,}" title="Username must contain 6 or more characters" placeholder="Must contain 6 or more characters" readonly required>
+                </div>  
+                
+                <div class="form-group ">
+                    <label for="getEmail">Email address</label>
+                    <input type="email" class="form-control" id="getEmail" name="email" value="wmitty@email.com" size="10" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="getPassword1">Password</label> 
+                    <input type="password" class="form-control" id="getPassword1" name="password" value="" pattern=".{6,}" title="Password must contain 6 characters" placeholder="Must contain 6 or more characters" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="getAge">Place of Birth</label> 
+                    <input type="text" class="form-control" id="getAge" name="age" minlength="4" maxlength="30" required>
+                </div>                
+                
+                <div class="form-group">
+                    <label for="getMobile">Mobile Number</label> 
+                    <input type="tel" class="form-control" id="getMobile" name="mobile" pattern="[0][8][0-9]\s[0-9]{7}"  title="Number is in format 08x 1234567" placeholder="Begins with 08" required>
+                </div>      
+                
+                <div class="form-group">
+                    <label for="getRegistration">Student ID</label> 
+                    <input type="text" class="form-control" id="getRegistration" name="registration" pattern="[S][0]{2}[0-9]{5}"  title="Begins with S00, 8 characters long" placeholder="Begins with SOO" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="getRegistration">Eircode </label> 
+                    <input type="text" class="form-control" id="getRegistration" name="registration" pattern="[a-zA-Z][0-9]{2}\s[a-zA-Z,0-9]{4}"  title="Routing key followed by unique id e.g. A65 F4E2 " placeholder="7 digit code" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="getRegistration">Car Registration</label> 
+                    <input type="text" class="form-control" id="getRegistration" name="registration" value="" pattern="[0-9]{2,3}\s(SO|so|MO|mo)\s[0-9]{1,5}$" title="Must be MO or SO registration, with spaces e.g 191 MO 3234" placeholder="Registration must be MO or SO" required>
+                </div>
+                <input type='submit' class="btn btn-primary" value="Submit">
+                
+                
+                <fieldset>
+                    <legend>Education Details</legend>
+                        <div class="form-group">
+                            <label for="getSchool">School/College Attended</label> 
+                            <input type="text" class="form-control" id="getSchool" name="school" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="getRegistration">Years attended</label> 
+                            <input type="text" class="form-control" id="getYears" name="yearsattended"  required>
+                        </div>
+                </fieldset>
+                
+                
+                
+            </form>
+        </div> 
+    </div>       
+</main>  
+</body>
+</html>
+
+
+
