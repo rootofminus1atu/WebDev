@@ -13,38 +13,51 @@ const products = [
     },
 ]
 
-// or load from local storage
-const quantities = new Signal(products.map((product) => (
-    {
-        productId: product.id,
-        quantity: 0
-    }
-)))
-
-// work on this
-new Effect(() => {
-    renderCartItems(products, quantities.value)
-    renderCartButton()
-})
 
 
+
+// Load quantities from localStorage or use default values
+let quantities = JSON.parse(
+    localStorage.getItem('cartQuantities')) || 
+    products.map((product) => ({ productId: product.id, quantity: 0 })
+);
+
+function updateLocalStorage() {
+    localStorage.setItem('cartQuantities', JSON.stringify(quantities));
+}
   
+
+function refresh() {
+    renderCartInfo(products, quantities)
+    renderCartItems(products, quantities)
+}
+
+function mutateCartData(func) {
+    func()
+    updateLocalStorage()
+    refresh()
+}
+
 function removeFromCart(prodInQuantitiesArr) {
-    console.log(`Removing product with ID ${prodInQuantitiesArr.productId} from the cart`)
-
     prodInQuantitiesArr.quantity = 0
-
-    console.log(`Updated quantities to ${prodInQuantitiesArr.quantity}`)
 }
 
 function addToCart(prodInQuantitiesArr) {
-    console.log(`Adding product with ID ${prodInQuantitiesArr.productId} to the cart`);
-
     prodInQuantitiesArr.quantity += 1
-
-    console.log(`Updated quantities to ${prodInQuantitiesArr.quantity}`);
 }
-  
+
+
+function renderCartInfo(products, quantities) {
+    const display = document.createElement('div')
+
+    console.log(quantities)
+    const totalCount = quantities.map(i => i.quantity).reduce((acc, curr) => acc + curr, 0)
+    display.innerText = `Products: ${totalCount}`
+
+    const container = document.getElementById('cart-info')
+    container.innerHTML = ''
+    container.append(display)
+}
 
 
 function renderCartItems(products, quantities) {
@@ -55,19 +68,18 @@ function renderCartItems(products, quantities) {
 
         div.innerHTML = `
             <h1>${product.name}</h1>
-            <p>${product.desc}</p>
-            `
+            <p>${product.desc}</p>`
 
         const prodInQuantitiesArr = quantities.find((p) => p.productId === product.id);
 
+
         const button = document.createElement('button')
 
-        
         if (prodInQuantitiesArr.quantity != 0) {
-            button.onclick = () => removeFromCart(prodInQuantitiesArr)
+            button.onclick = () => mutateCartData(() => removeFromCart(prodInQuantitiesArr))
             button.innerText = "Remove from Cart"
         } else {
-            button.onclick = () => addToCart(prodInQuantitiesArr)
+            button.onclick = () => mutateCartData(() => addToCart(prodInQuantitiesArr))
             button.innerText = "Add to Cart"
         }
 
@@ -79,10 +91,7 @@ function renderCartItems(products, quantities) {
     const container = document.getElementById('cart-items')
     container.innerHTML = ''
     container.append(...cards)
-
-
 }
 
 
-
-renderCartItems(products, quantities)
+refresh()
