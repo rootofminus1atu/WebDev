@@ -15,8 +15,8 @@ const products = [
 
 
 
+// 1st global slice
 
-// Load quantities from localStorage or use default values
 let quantities = JSON.parse(
     localStorage.getItem('cartQuantities')) || 
     products.map((product) => ({ productId: product.id, quantity: 0 })
