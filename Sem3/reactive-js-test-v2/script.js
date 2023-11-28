@@ -19,35 +19,31 @@ const products = [
 
 let quantities = JSON.parse(
     localStorage.getItem('cartQuantities')) || 
-    products.map((product) => ({ productId: product.id, quantity: 0 })
+    products.map((product) => ({ 
+        productId: product.id, 
+        quantity: 0 
+    })
 );
 
-function updateLocalStorage() {
-    localStorage.setItem('cartQuantities', JSON.stringify(quantities));
-}
-  
-
-function refresh() {
-    renderCartInfo(products, quantities)
-    renderCartItems(products, quantities)
-}
-
-function mutateCartData(func) {
+function mutateQuantities(func) {
     func()
-    updateLocalStorage()
+    localStorage.setItem('cartQuantities', JSON.stringify(quantities));
     refresh()
 }
 
-function removeFromCart(prodInQuantitiesArr) {
-    prodInQuantitiesArr.quantity = 0
+
+
+function refresh() {
+    renderProductCountDisplay(products, quantities)
+    renderCartItems(products, quantities)
+    renderCartItemDetails(products, quantities)
+    renderLoginArea()
 }
 
-function addToCart(prodInQuantitiesArr) {
-    prodInQuantitiesArr.quantity += 1
-}
 
 
-function renderCartInfo(products, quantities) {
+
+function renderProductCountDisplay(products, quantities) {
     const display = document.createElement('div')
 
     console.log(quantities)
@@ -55,6 +51,7 @@ function renderCartInfo(products, quantities) {
     display.innerText = `Products: ${totalCount}`
 
     const container = document.getElementById('cart-info')
+    if (!container) return
     container.innerHTML = ''
     container.append(display)
 }
@@ -73,24 +70,117 @@ function renderCartItems(products, quantities) {
         const prodInQuantitiesArr = quantities.find((p) => p.productId === product.id);
 
 
-        const button = document.createElement('button')
+        
+
+        const addButton = document.createElement('button')
+        addButton.onclick = () => mutateQuantities(() => prodInQuantitiesArr.quantity += 1)
+        addButton.innerText = "Add to Cart"
+        div.append(addButton)
 
         if (prodInQuantitiesArr.quantity != 0) {
-            button.onclick = () => mutateCartData(() => removeFromCart(prodInQuantitiesArr))
-            button.innerText = "Remove from Cart"
-        } else {
-            button.onclick = () => mutateCartData(() => addToCart(prodInQuantitiesArr))
-            button.innerText = "Add to Cart"
+            const removeButton = document.createElement('button')
+            removeButton.onclick = () => mutateQuantities(() => prodInQuantitiesArr.quantity = 0)
+            removeButton.innerText = "Remove from Cart"
+            div.append(removeButton)
         }
 
-        div.append(button)
 
         return div
     })
 
     const container = document.getElementById('cart-items')
+    if (!container) return
     container.innerHTML = ''
     container.append(...cards)
+}
+
+function renderCartItemDetails(products, quantities) {
+
+    const productsInCart = products.filter((product) => quantities.find(p => p.productId === product.id).quantity !== 0)
+
+    const cards = productsInCart.map((product) => {
+        const div = document.createElement('div')
+
+        div.innerHTML = `
+            <h1>${product.name}</h1>
+            <p>${product.desc}</p>`
+
+
+        const p = document.createElement('p')
+        p.innerText = `Quantity: ${quantities.find((p) => p.productId === product.id).quantity}`
+        div.append(p)
+
+        
+        const prodInQuantitiesArr = quantities.find((p) => p.productId === product.id);
+
+        const removeButton = document.createElement('button')
+        removeButton.onclick = () => mutateQuantities(() => prodInQuantitiesArr.quantity = 0)
+        removeButton.innerText = "Remove from Cart"
+        div.append(removeButton)
+
+
+        return div
+    })
+
+    const container = document.getElementById('cart-item-details')
+    if (!container) return
+    container.innerHTML = ''
+    container.append(...cards)
+}
+
+
+
+
+
+const user = {
+    name: 'waltuh',
+    password: 'finger'
+}
+
+let loggedIn = JSON.parse(
+    localStorage.getItem('loggedIn') || false
+)
+
+function mutateLoggedIn(func) {
+    func()
+    localStorage.setItem('loggedIn', JSON.stringify(loggedIn));
+    refresh()
+} 
+
+
+function createButtons() {
+    if (!loggedIn) {
+        const loginButton = document.createElement('button')
+        loginButton.setAttribute('type', 'button')
+        loginButton.setAttribute('class', 'btn btn-primary')
+        loginButton.innerText = 'Login'
+        loginButton.onclick = () => mutateLoggedIn(() => loggedIn = true)
+
+        return [loginButton]
+    } else {
+        const logoutButton = document.createElement('button')
+        logoutButton.setAttribute('type', 'button')
+        logoutButton.setAttribute('class', 'btn btn-primary')
+        logoutButton.innerText = 'Logout'
+        logoutButton.onclick = () => mutateLoggedIn(() => loggedIn = false)
+
+        const accountButton = document.createElement('button')
+        accountButton.setAttribute('type', 'button')
+        accountButton.setAttribute('class', 'btn btn-primary')
+        accountButton.innerText = 'Account'
+
+
+        return [logoutButton, accountButton]
+    }
+}
+
+function renderLoginArea() {
+    const buttons = createButtons()
+
+    const container = document.getElementById('login-area')
+    if (!container) return
+    container.innerHTML = ''
+    container.append(...buttons)
 }
 
 
