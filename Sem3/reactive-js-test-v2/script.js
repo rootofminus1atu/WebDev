@@ -42,7 +42,6 @@ function refresh() {
 
 
 
-
 function renderProductCountDisplay(products, quantities) {
     const display = document.createElement('div')
 
