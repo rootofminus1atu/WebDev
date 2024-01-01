@@ -1,5 +1,3 @@
-import { Signal, Effect } from './signals.js'
-
 const products = [
     {
         id: 1,
