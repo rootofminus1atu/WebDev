@@ -17,16 +17,10 @@
 
     <link rel="stylesheet" href="sass/style.css">
 
-    <script type="module" src="script.js" defer></script>
+    <script type="module" src="js/script.js" defer></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
-    
-
-
-
-
-    
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark py-3">
         <div class="container-md container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="/images/logo-white.png" alt="" height="40" class="d-inline-block align-text-top mx-2">
@@ -40,34 +34,33 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="shop.html">Shop</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
-
-                    <li class="nav-item" id="login-area">
-                    </li>
-    
-                    <li class="nav-item" id="account-area">
-                    </li>
                 </ul>
+                <div id="cart-info" class="me-2"></div>
+                <div id="login-account-area" class="d-flex me-2"></div>
             </div>
         </div>
     </nav>
+
 
     <div class="d-flex h-30" lc-helper="background" style="background:url('images/tavern-hero.webp')  center / cover no-repeat; background-color:#444; background-blend-mode: overlay;">
         <div class="align-self-center text-center text-light col-8 offset-2">
             <div class="lc-block mb-4">
                 <div editable="rich">
-                    <h1 class="display-1 fw-bolder">Skyrim</h1>
+                    <h1 class="display-1 fw-bolder">Skyshop</h1>
                 </div>
             </div>
 
             <div class="lc-block">
                 <div editable="rich">
-                    <p class="lead">Buy stuff</p>
+                    <p class="lead" id="hero-sub">Here Fantasy meets Reality</p>
 
 
                 </div>
@@ -112,7 +105,6 @@
 
     
 
-    <!-- carousel with like 5 images and a button below, view all -->
     <div class="container-fluid bg-dark text-white">
         <div class="m-5 container mx-auto">
             <div class="row mb-5">
@@ -150,29 +142,45 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row text-center mt-5">
+                <div class="col">
+                    <a href="shop.html" class="btn btn-outline-secondary fs-5">View all Products</a>
+                </div>
+            </div>
         </div>
     </div>
     
-    <!-- title: Skyrim shop, paragraph: lorem ipsum -->
-
-
-    <!-- footer -->
+    <div class="container my-5 mx-auto text-center">
+        <div class="row">
+            <div class="col-12 mt-4">
+                <div class="mx-4">
+                    <h2>Our quality is unmatched</h2>
+                    <p>Step into the extraordinary realm of Skyshop, where the allure of Tamriel's Skyrim transcends pixels and pixels to tantalize your taste buds. Our carefully curated selection transports you to the bustling streets of Riften, where the finest mead beckons with its rich and robust flavors. Venture further into the heart of Solitude, where every pastry tells a story of culinary mastery amidst breathtaking Nordic landscapes. Join us on a gastronomic odyssey, where each product is a portal to the fantastical world of Skyrim. Your journey into the extraordinary begins here at Skyshop - your haven for all foods Skyrim-inspired.</p>
+                </div>
+            </div>
+        </div>
+    </div>
  
   
-
-    <nav>
-        <h2>logo</h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="cart.html">Go to cart</a></li>
-        </ul>
-        <div id="cart-info"></div>
-        <div id="login-area"></div>
-    </nav>
-
-    <h1>MAIN PAGE</h1>
-
+    <footer class="bg-dark text-light py-4 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="d-flex align-items-center">
+                        <img src="/images/logo-white.png" alt="" height="40" class="d-inline-block align-text-top mx-2">
+                        <span style="font-size: 1.1rem; font-weight: 500;">Skyshop &copy; 2024</span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="d-flex justify-content-end">
+                        <a href="#" class="text-light me-3 fs-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-3 fs-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-light fs-3"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
