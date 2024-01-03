@@ -26,34 +26,55 @@ class CartManager {
     }
 
     renderCartItems(container) {
+        // i hate this script but at the same time i love how hacky it is
 
         // extract into function that creates cart items
         const cards = this.products.map((product) => {
     
+            // creating the card
             const div = document.createElement('div')
+            div.setAttribute('class', 'p-3 col-lg-6 col-12')
     
             div.innerHTML = `
-                <h1>${product.name}</h1>
-                <p>${product.desc}</p>`
+            <div class="card mb-3" style="padding: 0;">
+                <div class="row g-0">
+                    <div class="col-4">
+                        <img src="images/${product.imgName}" class="img-fluid rounded-start h-100" alt="${product.name}">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body d-flex flex-column h-100">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="card-text">${product.shortDesc}</p>
+
+                            <div class="mt-auto d-flex justify-content-between text">
+                                <p class="my-auto"><strong>€${product.price}</strong></p>
+                                <div class="btn-group">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>`
     
+
+            // doing data stuff and functionality in addition to that
             const prodInQuantitiesArr = this.quantities.find((p) => p.productId === product.id)
     
-    
-            
-    
-            const addButton = document.createElement('button')
-            addButton.onclick = () => this.mutateQuantities(() => prodInQuantitiesArr.quantity += 1)
-            addButton.innerText = "Add to Cart"
-            div.append(addButton)
-    
-            if (prodInQuantitiesArr.quantity != 0) {
+            if (prodInQuantitiesArr.quantity !== 0) {
                 const removeButton = document.createElement('button')
+                removeButton.setAttribute('class', 'btn btn-outline-danger')
                 removeButton.onclick = () => this.mutateQuantities(() => prodInQuantitiesArr.quantity = 0)
-                removeButton.innerText = "Remove from Cart"
-                div.append(removeButton)
+                removeButton.innerText = 'Remove'
+                div.querySelector('.btn-group').append(removeButton)
             }
-    
-    
+
+            const addButton = document.createElement('button')
+            addButton.setAttribute('class', 'btn btn-outline-primary')
+            addButton.onclick = () => this.mutateQuantities(() => prodInQuantitiesArr.quantity += 1)
+            addButton.innerText = 'Add to Cart'
+            div.querySelector('.btn-group').append(addButton)
+
             return div
         })
     
@@ -70,7 +91,9 @@ class CartManager {
         
         // extract into create count tracker funciton
         const display = document.createElement('div')
-        display.innerText = `Products: ${totalCount}`
+        display.setAttribute('class', 'text-white')
+        display.innerHTML = `
+        <i class="bi bi-cart"></i> ${totalCount}`
 
 
         if (!container) return
@@ -309,10 +332,84 @@ class UserManager {
 const products = [
     { 
         id: 1, 
-        name: 'skooma', 
-        desc: 'something something' 
+        name: 'Skooma', 
+        shortDesc: '90% proof Khajitian skooma', 
+        longDesc: '',
+        imgName: 'skooma.jpg',
+        price: 19.99
     },
-    { id: 2, name: 'mead', desc: 'something something more' },
+    { 
+        id: 2, 
+        name: 'Nord Mead', 
+        shortDesc: 'From farms near Whiterun',
+        longDesc: '',
+        imgName: 'nord-mead-transformed.jpeg',
+        price: 14.99
+    },
+    { 
+        id: 3, 
+        name: 'Sweetroll', 
+        shortDesc: 'The popular delicacy of Skyrim',
+        longDesc: '',
+        imgName: 'sweetroll.png',
+        price: 3.99
+    },
+    { 
+        id: 4, 
+        name: 'Horker Meat', 
+        shortDesc: 'Rare and exquisite',
+        longDesc: '',
+        imgName: 'horker-meat-transformed.jpeg',
+        price: 49.99
+    },
+    { 
+        id: 5, 
+        name: 'Alto Wine', 
+        shortDesc: 'Traditional, rich and aromatic',
+        longDesc: '',
+        imgName: 'alto-wine.jpg',
+        price: 8.99
+    },
+    { 
+        id: 6, 
+        name: 'Ash Yam', 
+        shortDesc: 'Rare sweet potato variant from Solstheim',
+        longDesc: '',
+        imgName: 'ash-yam.jpg',
+        price: 14.99
+    },
+    { 
+        id: 7, 
+        name: 'Mammoth Cheese', 
+        shortDesc: 'Ancient aroma, perfect for prestigeous dishes',
+        longDesc: '',
+        imgName: 'mammoth-cheese.jpg',
+        price: 84.99
+    },
+    { 
+        id: 8, 
+        name: 'Snowberry Crostata', 
+        shortDesc: 'A true classic from Haafingar',
+        longDesc: '',
+        imgName: 'snowberry-crostata.jpg',
+        price: 2.49
+    },
+    { 
+        id: 9, 
+        name: 'Boiled Creme Treat', 
+        shortDesc: "Whiterun Jarl's favorite pastry",
+        longDesc: '',
+        imgName: 'boiled-creme-treat.jpg',
+        price: 3.49
+    },
+    { 
+        id: 10, 
+        name: 'Goat Cheese Wheel', 
+        shortDesc: "Cultivated in The Reach",
+        longDesc: '',
+        imgName: 'goat-cheese-wheel.png',
+        price: 24.99
+    },
 ];
 
 const shoppingCart = new CartManager(products);
