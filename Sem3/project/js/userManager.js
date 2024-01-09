@@ -52,17 +52,17 @@ export default class UserManager {
         if (!this.user.loggedIn) {
             return [
                 this.createButton('Login', () => {
-                    window.location.href = '/login.html'
+                    window.location.href = './login.html'
                 })
             ];
         } else {
             return [
                 this.createButton('Logout', () => {
                     this.mutateUserDetails(() => this.user.loggedIn = false)
-                    window.location.href = '/index.html'
+                    window.location.href = './index.html'
                 }),
                 this.createButton('Account', () => {
-                    window.location.href = '/account.html'
+                    window.location.href = './account.html'
                 }),
             ];
         }
@@ -114,7 +114,7 @@ export default class UserManager {
             this.mutateUserDetails(() => {
                 this.mutateUserDetails(() => this.user.loggedIn = true)
                 hideToast()
-                window.location.href = '/index.html'
+                window.location.href = './index.html'
             });
         } else {
             showToast()
@@ -187,7 +187,7 @@ export default class UserManager {
     /// processes the checkout form
     processCheckout() {
         if (!this.user.loggedIn) {
-            window.location = '/login.html'
+            window.location = './login.html'
             return
         }
 

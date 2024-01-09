@@ -113,7 +113,7 @@ export default class CartManager {
         const button = document.createElement('button')
         button.setAttribute('class', 'btn btn-outline-secondary my-2 me-2')
         button.innerHTML = `<i class="bi bi-cart"></i> ${totalCount}</button>`
-        button.onclick = () => window.location = '/cart.html'
+        button.onclick = () => window.location = './cart.html'
 
         if (!container) return
         container.innerHTML = ''
