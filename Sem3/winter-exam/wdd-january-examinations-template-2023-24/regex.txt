@@ -1,0 +1,11 @@
+PPS number
+[1-9]\d{6}[A-Z]{1,2}
+
+
+CAO codes for ATU
+AU[1-9]\d{2}
+
+
+Patient date of birth
+\d{2}-(0[1-9]|1[0-2])-(19|20|21)\d{2}
+

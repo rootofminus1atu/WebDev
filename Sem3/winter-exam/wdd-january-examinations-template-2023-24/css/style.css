@@ -1,0 +1,16 @@
+.required-star {
+    color: red;
+}
+
+
+
+
+/* for question 3*/
+
+nav .active {
+    background-color: orange !important;
+}
+
+img {
+    border: 3px solid black;
+}

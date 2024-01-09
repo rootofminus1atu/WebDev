@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Q2 - WDD Template January 2023</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  
+  
+    <link rel="stylesheet" href="css/style.css">
+  
+    <script type="module" src="js/custom.js" defer></script>
+  
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">WD&D January 2023</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link " href="index.html">Home</a>
+              <a class="nav-link" href="question1.html">Question 1</a>
+              <a class="nav-link active" aria-current="page"  href="question2.html">Question 2</a>
+              <a class="nav-link "  href="question3.html">Question 3</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <h1>Q2</h1>
+
+        <div class="container my-5 mx-auto ">
+          <form method="get" id="login-form" class="row" >
+              
+              <div class="col-md-6">
+                  <div class="alert alert-success d-none" role="alert" id="login-ok">
+                    Login details are correct
+                  </div>
+                  <div class="alert alert-danger d-none" role="alert" id="login-not-ok">
+                    Login details are invalid
+                  </div>
+                  <div class="mb-3 form-group required">
+                      <label for="username" class="form-label">Username<span class="required-star">*</span></label>
+                      <input type="text" class="form-control" name="username" id="username" pattern=".{0,20}" title="Usernames can only be up to 20 characters long" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="password" class="form-label">Password<span class="required-star">*</span></label>
+                      <input type="password" class="form-control" name="password" id="password" placeholder="ex. 083 123 1234" pattern=".{0,16}" title="Passwords can only be up to 16 characters long" card n required>
+                  </div>
+              </div>
+
+
+              <div>
+                  <button type="submit" class="btn btn-primary">Login</button>
+              </div>
+          </form>
+      </div>
+
+
+
+
+
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+  </body>
+
+ 
+</html>
